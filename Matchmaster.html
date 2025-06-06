@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Master - A Global Learning Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Match Master - A Global Learning Game</h1>
+  </header>
+  <div id="loginSection">
+    <h3>Enter Your Name</h3>
+    <input type="text" id="username" placeholder="Enter username" />
+    <!--<input type="password" id="password" placeholder="Enter password" />-->
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="gameSection" class="hidden">
+    <div>
+      <span id="logoutBtn" onclick="logout()">Logout</span>
+      <h3>Welcome, <span id="userDisplay"></span>!</h3>
+    </div>
+
+    <div id="categorySection">
+      <label for="category">Choose Category:</label>
+      <select id="category">
+        <!--<option value="" disabled selected>Select Category</option>-->
+        <option value="currency">Currency</option>
+        <option value="monuments">Monument</option>
+        <option value="flags">Flags</option>
+      </select>
+      <button onclick="startGame()">Start</button>
+    </div>
+
+    <div id="gameArea" class="hidden">
+      <div class="drag-container" id="draggables"></div>
+      <div class="drop-container" id="dropzones"></div>
+      <div id="message"></div>
+      <div id="score" style="text-align:center; font-size: 18px; margin: 10px 0;"></div>
+      <div id="result" style="text-align:center; font-size: 20px; margin-top: 20px; font-weight: bold;"></div>
+      <div id="backButtonContainer" class="hidden" style="text-align:center;">
+        <button onclick="backToCategory()">Back to Category</button>
+      </div>      
+    </div>
+  </div>
+  <footer>
+    <p>Match Master &copy; 2025</p>
+</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
